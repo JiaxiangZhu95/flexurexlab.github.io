@@ -2,78 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlexureX Lab | Dr. Jiaxiang Zhu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jiaxiang Zhu | FlexureX Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {font-family: 'Segoe UI', Roboto, sans-serif; margin:0; background:#fafafa; color:#222; line-height:1.6;}
-    header {background:linear-gradient(120deg,#d92332,#1c1c1c);color:#fff;text-align:center;padding:80px 20px;}
-    header h1{font-size:3rem;margin:0;}
-    header p{font-size:1.2rem;font-style:italic;}
-    section{max-width:900px;margin:60px auto;padding:0 20px;}
-    h2{color:#d92332;border-bottom:2px solid #d92332;display:inline-block;margin-bottom:15px;}
-    ul{padding-left:20px;}
-    a{color:#d92332;text-decoration:none;}
-    footer{background:#1c1c1c;color:#ccc;text-align:center;padding:25px;font-size:0.9rem;}
+    @keyframes gradient-x {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .animate-gradient-x {
+      background-size: 400% 400%;
+      animation: gradient-x 10s ease infinite;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
+<body class="font-sans text-gray-800">
 
-<body>
-  <header>
-    <h1>FlexureX Lab</h1>
-    <p>Ultra-Precise Motion via Flexible Structures</p>
-  </header>
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold text-blue-900">Dr. Jiaxiang Zhu | FlexureX Lab</h1>
+      <div class="space-x-4 md:space-x-6 text-sm md:text-base">
+        <a href="#home" class="text-gray-700 hover:text-blue-800">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-800">About</a>
+        <a href="#lab" class="text-gray-700 hover:text-blue-800">FlexureX Lab</a>
+        <a href="#awards" class="text-gray-700 hover:text-blue-800">Awards</a>
+        <a href="#publications" class="text-gray-700 hover:text-blue-800">Publications</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-800">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <section>
-    <h2>Principal Investigator</h2>
-    <p><strong>Dr. Jiaxiang Zhu</strong><br>
-      School of Engineering and Architecture, University College Cork, Ireland<br>
-      <a href="mailto:118221809@umail.ucc.ie">118221809@umail.ucc.ie</a>
-    </p>
-
-    <h2>About</h2>
-    <p>
-      FlexureX Lab focuses on the design, nonlinear analysis, and experimental validation of
-      advanced compliant mechanisms that enable sub-micron precision motion. Our work supports
-      next-generation nano-positioning systems, surgical tools, and precision robotics through
-      innovations in flexure-based actuation and structural optimization.
-    </p>
-
-    <h2>Research Highlights</h2>
-    <ul>
-      <li>Nonlinear design of general single-translation constraints and spherical joints (<em>J. Mech. Des., 2025</em>).</li>
-      <li>Modeling of general lumped-compliance beams (<em>Int. J. Mech. Sci., 2024</em>).</li>
-      <li>Over-constraint compliant mechanisms with nearly constant amplification ratios (<em>MMT, 2023</em>).</li>
-      <li>Mirror-symmetrical XY compliant parallel manipulator minimizing parasitic rotation (<em>J. Mech. Des., 2022</em>).</li>
-      <li>Compliant grippers based on the Scott–Russell mechanism (<em>Arch. Civ. Mech. Eng., 2020</em>).</li>
-    </ul>
-
-    <h2>Awards & Honors</h2>
-    <ul>
-      <li>Winner – Publication of the Year Award, School of Engineering and Architecture (UCC, 2023)</li>
-      <li>Best Presentation Award – 2nd Forum for Chinese PhD Students in Ireland (2023)</li>
-      <li>ASME Compliant Mechanisms Award (2022)</li>
-      <li>Multiple top-3 placements in ASME Student Mechanism & Robot Design Competitions (2022–2023)</li>
-      <li>First Class Honours (M.S. Mechanical Engineering, UCC, 2019)</li>
-    </ul>
-
-    <h2>Publications</h2>
-    <p>For a full list of journal and conference papers, see Dr. Zhu’s <a href="https://scholar.google.com">Google Scholar profile</a> or download the CV below.</p>
-
-    <h2>Teaching</h2>
-    <p>
-      Graduate Teaching Assistant (2021–2024) – CAD/CAM, University College Cork.<br>
-      Developed and delivered lectures on Finite Element Analysis (FEA) integrated with CAD and Ansys tools.
-    </p>
-
-    <h2>Contact</h2>
-    <p>
-      📍 Cork, Ireland  |  📧 <a href="mailto:118221809@umail.ucc.ie">118221809@umail.ucc.ie</a><br>
-      <a href="2.%20Jiaxiang_Zhu%20CV.pdf">Download Full CV (PDF)</a>
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-800 via-indigo-700 to-amber-500 animate-gradient-x"></div>
+    <div class="z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Dr. Jiaxiang Zhu</h1>
+      <p class="text-lg md:text-2xl mb-8">Lecturer in Mechanical Engineering | Compliant Mechanisms & Precision Robotics</p>
+      <a href="#lab" class="px-6 py-3 bg-amber-400 text-blue-900 font-semibold rounded-lg shadow hover:bg-amber-300 transition">Explore Research</a>
+      <a href="#publications" class="ml-4 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-800 transition">View Publications</a>
+    </div>
   </section>
 
-  <footer>
-    © 2025 FlexureX Lab | Dr. Jiaxiang Zhu – University College Cork
+  <!-- About -->
+  <section id="about" class="pt-28 pb-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-blue-900 mb-6">About</h2>
+    <p class="text-lg mb-4">Dr. Jiaxiang Zhu is a Lecturer in Mechanical Engineering at Aston University, UK. His research specializes in the design, nonlinear analysis, and experimental validation of advanced compliant mechanisms that enable precise motions for high-precision applications such as nano-positioning systems, surgical tools, and precision robotics.</p>
+    <p class="text-lg">His work integrates modeling, fabrication, and system optimization to advance compliant design principles in the fields of robotics and precision motion systems.</p>
+  </section>
+
+  <!-- FlexureX Lab -->
+  <section id="lab" class="pt-28 pb-16 max-w-6xl mx-auto px-6 text-center">
+    <img src="logo.png" alt="FlexureX Lab Logo" class="w-56 mx-auto mb-4" />
+    <h2 class="text-4xl font-bold text-blue-900 mb-2">FlexureX Lab</h2>
+    <p class="text-lg italic text-gray-600 mb-10">Ultra-precise motion via flexible structures</p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 bg-white shadow-lg rounded-2xl border hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Nonlinear Design</h3>
+        <p class="text-gray-600 text-sm">Innovative flexure systems optimized through nonlinear modeling and analysis.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl border hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Flexure Mechanisms</h3>
+        <p class="text-gray-600 text-sm">Design of compliant structures for compact, precise motion transmission.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl border hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Nano-Positioning</h3>
+        <p class="text-gray-600 text-sm">High-precision mechanisms for micro/nano manipulation and metrology.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl border hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Surgical Robotics</h3>
+        <p class="text-gray-600 text-sm">Flexible and safe robotic tools enabled by compliant mechanisms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="pt-28 pb-16 max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-blue-900 mb-6 text-center">Awards & Honors</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+      <div class="h-48 bg-gray-200 rounded-2xl shadow-inner flex items-center justify-center text-gray-500">Image Placeholder</div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="pt-28 pb-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-blue-900 mb-6 text-center">Publications</h2>
+    <p class="text-gray-700 text-center mb-8">A selection of recent publications by Dr. Zhu in the fields of compliant mechanisms and mechanical design.</p>
+    <ul class="space-y-4 text-left">
+      <li><strong>Zhu, J.</strong>, Li, S., & Hao, G. (2025). Nonlinear design of a general single-translation constraint and the resulting general spherical joint. <em>Journal of Mechanical Design</em>. <a href=\"https://doi.org/10.1115/1.4068101\" class=\"text-blue-700 hover:underline\">DOI</a></li>
+      <li><strong>Zhu, J.</strong>, & Hao, G. (2024). Modelling of a general lumped-compliance beam for compliant mechanisms. <em>International Journal of Mechanical Sciences</em>. <a href=\"https://doi.org/10.1016/j.ijmecsci.2023.108779\" class=\"text-blue-700 hover:underline\">DOI</a></li>
+      <li><strong>Zhu, J.</strong>, Hao, G., Liu, T., & Li, H. (2023). Design of an over-constraint based nearly-constant amplification ratio compliant mechanism. <em>Mechanism and Machine Theory</em>. <a href=\"https://doi.org/10.1016/j.mechmachtheory.2023.105347\" class=\"text-blue-700 hover:underline\">DOI</a></li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="pt-28 pb-16 text-center max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-blue-900 mb-6">Contact</h2>
+    <p class="text-lg text-gray-700 mb-4">Lecturer, School of Engineering and Innovation, Aston University, UK</p>
+    <p class="text-gray-700 mb-2">Email: <a href="mailto:j.zhu13@aston.ac.uk" class="text-blue-700 hover:underline">j.zhu13@aston.ac.uk</a></p>
+    <p class="text-gray-700 mb-6">Phone: +353 (0)833748734</p>
+    <div class="flex justify-center space-x-6 text-2xl text-blue-800">
+      <a href="#" class="hover:text-amber-500 transition">Google Scholar</a>
+      <a href="#" class="hover:text-amber-500 transition">ResearchGate</a>
+      <a href="#" class="hover:text-amber-500 transition">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-100 border-t text-gray-600">
+    © 2025 Jiaxiang Zhu | FlexureX Lab
   </footer>
+
 </body>
 </html>
