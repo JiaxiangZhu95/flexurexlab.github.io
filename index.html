@@ -77,41 +77,42 @@
 
 <body class="text-gray-800">
 
-  <!-- Navbar -->
-  <nav class="fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Left: logo + name -->
-      <div class="flex items-center space-x-3">
-        <img src="logo.png" alt="FlexureX Lab Logo" class="w-10 h-10">
-        <h1 class="text-lg md:text-2xl font-bold text-indigo-900">
-          Dr. Jiaxiang Zhu | FlexureX Lab
-        </h1>
-      </div>
-      <!-- Right: navigation buttons -->
-      <div class="space-x-4 md:space-x-6 text-sm md:text-base font-medium">
-        <button data-target="home" class="nav-btn text-gray-700 hover:text-indigo-700">Home</button>
-        <button data-target="about" class="nav-btn text-gray-700 hover:text-indigo-700">About</button>
-        <button data-target="lab" class="nav-btn text-gray-700 hover:text-indigo-700">Lab</button>
-        <button data-target="awards" class="nav-btn text-gray-700 hover:text-indigo-700">Awards</button>
-        <button data-target="publications" class="nav-btn text-gray-700 hover:text-indigo-700">Publications</button>
-        <button data-target="contact" class="nav-btn text-gray-700 hover:text-indigo-700">Contact</button>
-      </div>
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    <!-- Left: Larger lab logo and name -->
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="FlexureX Lab Logo" class="w-14 h-14 drop-shadow-md">
+      <h1 class="text-lg md:text-2xl font-extrabold text-indigo-900 tracking-tight">
+        Dr. Jiaxiang Zhu | FlexureX Lab
+      </h1>
     </div>
-  </nav>
 
-  <!-- HERO / HOME SECTION -->
-  <section id="home" class="page-section active min-h-screen flex flex-col justify-center items-center text-center pt-24 bg-indigo-950 text-white">
-    <!-- Title + Tagline -->
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-3">Dr. Jiaxiang Zhu</h1>
-    <p class="text-lg md:text-2xl text-gray-200 mb-4">Lecturer in Mechanical Engineering | Aston University, UK</p>
-    <p class="text-base md:text-lg font-medium tracking-wide text-amber-400 mb-8">Compliant Mechanisms • Precision Robotics • Flexure Design</p>
-
-    <!-- Buttons -->
-    <div class="flex flex-wrap justify-center gap-4">
-      <button data-target="lab" class="nav-btn px-6 py-3 bg-amber-400 text-indigo-950 font-semibold rounded-lg shadow hover:bg-amber-300 transition">Explore Research</button>
-      <button data-target="publications" class="nav-btn px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-indigo-900 transition">View Publications</button>
+    <!-- Right: vivid, organized nav buttons -->
+    <div class="space-x-4 md:space-x-6 text-sm md:text-base font-semibold">
+      <button data-target="home" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">Home</button>
+      <button data-target="about" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">About</button>
+      <button data-target="lab" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">Lab</button>
+      <button data-target="awards" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">Awards</button>
+      <button data-target="publications" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">Publications</button>
+      <button data-target="contact" class="nav-btn text-indigo-900 hover:text-amber-500 border-b-2 border-transparent hover:border-amber-400 transition-all duration-300">Contact</button>
     </div>
-  </section>
+  </div>
+</nav>
+
+<!-- HOME / HERO SECTION -->
+<section id="home" class="page-section active min-h-screen flex flex-col justify-center items-center text-center pt-24 bg-indigo-950 text-white px-4">
+  <!-- Portrait -->
+  <img src="portrait.jpg" alt="Dr. Jiaxiang Zhu Portrait" class="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-amber-400 shadow-xl mb-6">
+  
+  <!-- Title and tagline -->
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-3">Dr. Jiaxiang Zhu</h1>
+  <p class="text-lg md:text-2xl text-gray-200 mb-4">Lecturer in Mechanical Engineering | Aston University, UK</p>
+  <p class="text-base md:text-lg font-medium tracking-wide text-amber-400">
+    Compliant Mechanisms • Precision Robotics • Flexure Design
+  </p>
+</section>
+
 <!-- ===================================== -->
 <!-- END PART 1 -->
 <!-- ===================================== -->
