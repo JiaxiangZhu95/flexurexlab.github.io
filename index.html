@@ -352,9 +352,12 @@
       navLinks.classList.toggle('hidden');
     });
 
-// Section fade transitions
+// Section fade transitions + auto-close mobile menu
 const navButtons = document.querySelectorAll('.nav-btn');
 const sections = document.querySelectorAll('.page-section');
+const menuBtn = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
 function showSection(targetId) {
   sections.forEach(sec => {
     if (sec.id === targetId) {
@@ -367,12 +370,25 @@ function showSection(targetId) {
   });
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Show selected section + close mobile menu automatically
 navButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = btn.getAttribute('data-target');
     showSection(target);
+
+    // Hide mobile menu when a nav item is clicked
+    if (!navLinks.classList.contains('hidden')) {
+      navLinks.classList.add('hidden');
+    }
   });
 });
+
+// Mobile menu toggle
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('hidden');
+});
+
   </script>
 </body>
 </html>
