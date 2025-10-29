@@ -344,35 +344,53 @@
   <footer>© 2025 Jiaxiang Zhu | FlexureX Lab</footer>
 
   <!-- JAVASCRIPT -->
-  <script>
-    // Mobile menu
-    const menuBtn = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('hidden');
-    });
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
-// Section fade transitions
-const navButtons = document.querySelectorAll('.nav-btn');
-const sections = document.querySelectorAll('.page-section');
-function showSection(targetId) {
-  sections.forEach(sec => {
-    if (sec.id === targetId) {
-      sec.classList.add('active');
-      setTimeout(() => { sec.style.display = 'block'; }, 100);
+  // Add transition effect for fade out
+  navLinks.style.transition = 'opacity 0.3s ease';
+
+  menuBtn.addEventListener('click', () => {
+    if (navLinks.classList.contains('hidden')) {
+      navLinks.classList.remove('hidden');
+      navLinks.style.opacity = '1';
     } else {
-      sec.classList.remove('active');
-      setTimeout(() => { sec.style.display = 'none'; }, 600);
+      navLinks.style.opacity = '0';
+      setTimeout(() => navLinks.classList.add('hidden'), 300);
     }
   });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-navButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.getAttribute('data-target');
-    showSection(target);
+
+  // Section fade transitions
+  const navButtons = document.querySelectorAll('.nav-btn');
+  const sections = document.querySelectorAll('.page-section');
+
+  function showSection(targetId) {
+    sections.forEach(sec => {
+      if (sec.id === targetId) {
+        sec.classList.add('active');
+        setTimeout(() => { sec.style.display = 'block'; }, 100);
+      } else {
+        sec.classList.remove('active');
+        setTimeout(() => { sec.style.display = 'none'; }, 600);
+      }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      showSection(target);
+
+      // 🔽 New: hide mobile menu after click (with fade)
+      if (window.innerWidth < 768) {
+        navLinks.style.opacity = '0';
+        setTimeout(() => navLinks.classList.add('hidden'), 300);
+      }
+    });
   });
-});
-  </script>
+</script>
 </body>
 </html>
